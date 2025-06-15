@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se - Cine Terror</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="site-title">Cine Terror</h1>
+        <p class="site-slogan">Seus Piores Pesadelos em Review</p>
+        <nav class="main-nav">
+            <a href="login.html" class="btn-primary">Login</a>
+            <a href="cadastro.html" class="btn-secondary">Cadastre-se</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="register-container">
+            <h2>Cadastre-se no Cine Terror</h2>
+            <form action="#" method="POST">
+                <div class="input-group">
+                    <label for="username">Nome de Usuário:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="input-group">
+                    <label for="confirm_password">Confirmar Senha:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                </div>
+                <button type="submit" class="btn-register">Criar Conta</button>
+            </form>
+            <p class="login-link">Já tem uma conta? <a href="login.html">Faça Login</a></p>
+            
+            <p class="back-home-link" style="margin-top: 20px;"><a href="index.html" class="btn-secondary">Voltar para o Início</a></p>
+        </div>
+    </main>
+
+    <div class="glitch-effect"></div>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Cine Terror. Todos os direitos reservados. Design e Desenvolvimento por BNH.</p>
+    </footer>
+
+    <script src="js/glitch.js"></script>
+</body>
+</html>

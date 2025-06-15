@@ -1,0 +1,603 @@
+/* Importação das fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&family=Merriweather+Sans:wght@300;400;700&display=swap');
+/* Se você quiser manter a Nosifier ou Creepster para testes, pode importar também:
+@import url('https://fonts.com/css2?family=Nosifier&display=swap');
+@import url('https://fonts.com/css2?family=Creepster&display=swap');
+*/
+
+/* Reset Básico e Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura/altura */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #1a1a1a; /* Fundo escuro padrão */
+    color: #eee; /* Cor do texto principal */
+    font-family: 'Merriweather Sans', sans-serif; /* Fonte padrão para o corpo */
+    line-height: 1.7; /* Melhorando a legibilidade do texto */
+    -webkit-font-smoothing: antialiased; /* Suavização de fonte para Webkit */
+    -moz-osx-font-smoothing: grayscale; /* Suavização de fonte para Firefox */
+}
+
+/* Estilos do Cabeçalho Principal (Header) */
+.main-header {
+    background-color: #111;
+    color: #eee;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 3px solid #e50914; /* Linha de destaque vermelha */
+}
+
+.site-title {
+    font-family: 'Metal Mania', cursive; /* Fonte do tema de terror */
+    font-size: 4.5em; /* Tamanho grande para o título do site */
+    color: #eee;
+    margin: 0;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9); /* Sombra para profundidade */
+    letter-spacing: 3px; /* Espaçamento entre letras */
+}
+
+.site-slogan {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 1.4em;
+    color: #aaa;
+    margin-top: 8px;
+}
+
+/* Estilos da Navegação Principal (Nav) */
+.main-nav {
+    margin-top: 20px;
+    display: flex; /* Flexbox para alinhar itens */
+    justify-content: center; /* Centraliza os itens */
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
+}
+
+.main-nav .dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px; /* Espaçamento entre os itens de navegação */
+}
+
+.main-nav .dropdown .dropbtn {
+    background-color: #e50914;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: flex; /* Para alinhar texto e seta */
+    align-items: center;
+}
+
+.main-nav .dropdown .dropbtn:hover {
+    background-color: #c00711;
+}
+
+.main-nav .dropdown .arrow-down {
+    margin-left: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.main-nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 100; /* Garante que o dropdown fique acima de outros elementos */
+    border-radius: 5px;
+    top: 100%; /* Posiciona abaixo do botão */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza o dropdown */
+    overflow: hidden; /* Garante que as bordas arredondadas funcionem bem */
+}
+
+.main-nav .dropdown-content a {
+    color: #eee;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-nav .dropdown-content a:hover {
+    background-color: #555;
+    color: #ff3333; /* Cor do link no hover */
+}
+
+.main-nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Estilos de Botões Genéricos */
+.btn-primary,
+.btn-secondary {
+    background-color: #e50914;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.btn-secondary {
+    background-color: #555;
+}
+
+.btn-primary:hover {
+    background-color: #c00711;
+    transform: translateY(-2px);
+}
+
+.btn-secondary:hover {
+    background-color: #777;
+    transform: translateY(-2px);
+}
+
+
+/* Estilos para o Conteúdo Principal (Container) */
+.container {
+    max-width: 960px; /* Largura padrão para o conteúdo principal */
+    margin: 30px auto; /* Espaçamento superior/inferior e centralizado */
+    padding: 20px;
+    background-color: #2a2a2a; /* Fundo do conteúdo */
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8); /* Sombra para profundidade */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+/* Estilos para cards de filmes (usados na index) */
+.featured-reviews .section-title {
+    font-family: 'Metal Mania', cursive;
+    color: #e50914;
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 40px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    letter-spacing: 2px;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsivo para 3 colunas */
+    gap: 30px; /* Espaço entre os cards */
+    padding-bottom: 30px;
+    border-bottom: 1px solid #333;
+}
+
+.movie-card {
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden; /* Garante que a imagem não vaze */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px); /* Efeito de elevação no hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.movie-card .image-link {
+    display: block;
+    height: 380px; /* Altura fixa para as imagens */
+    overflow: hidden;
+}
+
+.movie-card .movie-poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover .movie-poster {
+    transform: scale(1.05); /* Zoom sutil na imagem no hover */
+}
+
+.movie-card h3 {
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+}
+
+.movie-card .movie-title-link {
+    font-family: 'Merriweather Sans', sans-serif; /* Consistência da fonte */
+    color: #e50914;
+    text-decoration: none;
+    font-size: 1.3em;
+    transition: color 0.3s ease;
+}
+
+.movie-card .movie-title-link:hover {
+    color: #ff3333;
+}
+
+.movie-card .movie-description {
+    padding: 0 15px 20px;
+    font-size: 0.95em;
+    color: #bbb;
+}
+
+/* Estilos para Notícias/Artigos Recentes (na index) */
+.latest-news .section-title {
+    font-family: 'Metal Mania', cursive;
+    color: #e50914;
+    font-size: 2.5em; /* Um pouco menor que o título de featured reviews */
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.news-item {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.news-item:hover {
+    background-color: #444;
+}
+
+.news-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.news-item .news-link {
+    font-family: 'Merriweather Sans', sans-serif;
+    color: #e50914;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.news-item .news-link:hover {
+    color: #ff3333;
+}
+
+.news-item p {
+    font-size: 0.95em;
+    color: #bbb;
+    margin-bottom: 0;
+}
+
+.news-item .read-more {
+    color: #ff3333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.news-item .read-more:hover {
+    color: #ff6666;
+    text-decoration: underline;
+}
+
+/* Estilos Específicos para Páginas de Login e Cadastro */
+.login-container,
+.register-container {
+    background-color: #2a2a2a;
+    padding: 50px; /* Aumentei o padding para estender */
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+    width: 100%;
+    max-width: 550px; /* Aumentei a largura máxima do container */
+    text-align: center;
+    margin: auto; /* Centraliza */
+    box-sizing: border-box;
+    border: 1px solid #3a3a3a;
+}
+
+.login-container h2,
+.register-container h2 {
+    font-family: 'Metal Mania', cursive;
+    color: #e50914;
+    margin-bottom: 35px;
+    font-size: 3em;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+.input-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ccc;
+    font-size: 1.1em;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"] {
+    width: calc(100% - 28px); /* Ajusta largura para considerar o padding e borda */
+    padding: 14px 12px;
+    border: 2px solid #555;
+    border-radius: 5px;
+    background-color: #3a3a3a;
+    color: #eee;
+    font-size: 1.1em;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="email"]:focus,
+.input-group input[type="password"]:focus {
+    border-color: #ff3333;
+    box-shadow: 0 0 12px rgba(229, 9, 20, 0.6);
+}
+
+.btn-login,
+.btn-register {
+    background-color: #e50914;
+    color: #fff;
+    padding: 18px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.3em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    width: 100%;
+    letter-spacing: 1.5px;
+    margin-top: 20px;
+}
+
+.btn-login:hover,
+.btn-register:hover {
+    background-color: #c00711;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+.forgot-password,
+.login-link,
+.signup-link {
+    margin-top: 30px;
+    font-size: 1.1em;
+    color: #ccc;
+}
+
+.forgot-password a,
+.login-link a,
+.signup-link a {
+    color: #e50914;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.forgot-password a:hover,
+.login-link a:hover,
+.signup-link a:hover {
+    color: #ff3333;
+    text-decoration: underline;
+}
+
+/* Estilos Específicos para a Página de Artigo */
+.article-title {
+    font-family: 'Metal Mania', cursive;
+    color: #e50914;
+    font-size: 3.5em; /* Tamanho grande para o título do artigo */
+    text-align: center;
+    margin-bottom: 40px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    letter-spacing: 2px;
+}
+
+.article-section h3 {
+    font-family: 'Metal Mania', cursive;
+    color: #ff3333; /* Cor para subtítulos dos filmes */
+    font-size: 2.2em;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.article-section p {
+    font-size: 1.05em;
+    margin-bottom: 20px;
+    text-align: justify; /* Justifica o texto para um visual mais limpo */
+}
+
+.article-section strong {
+    color: #e50914; /* Destaca palavras-chave em vermelho */
+}
+
+/* --- ESTILOS CORRIGIDOS PARA OS POSTERS DO ARTIGO --- */
+/* Contêiner para os pôsteres dos filmes do artigo */
+.movie-posters-container {
+    display: flex; /* Organiza os itens em linha */
+    justify-content: center; /* Centraliza os pôsteres horizontalmente */
+    align-items: flex-start; /* Alinha os pôsteres pelo topo */
+    gap: 20px; /* Espaçamento entre os pôsteres */
+    flex-wrap: wrap; /* Permite que os pôsteres quebrem para a linha de baixo em telas menores */
+    margin-top: 30px; /* Espaço acima do contêiner de pôsteres */
+    margin-bottom: 30px; /* Espaço abaixo do contêiner de pôsteres */
+}
+
+/* Estilo para cada pôster de filme individual no artigo */
+.article-movie-poster {
+    width: 200px; /* **Largura padrão para os cartazes (AJUSTE AQUI SE AINDA ESTIVER GRANDE)** */
+    height: 300px; /* **Altura fixa para manter a proporção consistente entre eles** */
+    object-fit: cover; /* **Garante que a imagem preencha a área sem distorcer e corta o excesso** */
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito suave */
+}
+
+/* Efeito ao passar o mouse sobre o pôster do artigo */
+.article-movie-poster:hover {
+    transform: scale(1.07); /* Leve aumento de tamanho */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Sombra mais intensa */
+}
+/* --- FIM DOS ESTILOS CORRIGIDOS PARA OS POSTERS DO ARTIGO --- */
+
+
+/* Estilos do Rodapé (Footer) */
+.main-footer {
+    background-color: #111;
+    color: #888;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto; /* Empurra o rodapé para baixo */
+    border-top: 1px solid #333;
+    font-size: 0.9em;
+}
+
+/* ================================================================= */
+/* Responsividade (Media Queries)               */
+/* ================================================================= */
+
+@media (max-width: 992px) { /* Para telas de tablets grandes */
+    .container {
+        max-width: 90%;
+    }
+    .review-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    /* Ajuste para pôsteres do artigo em telas grandes de tablet */
+    .article-movie-poster {
+        width: 180px;
+        height: 270px;
+    }
+}
+
+@media (max-width: 768px) { /* Para tablets e smartphones maiores */
+    .site-title {
+        font-size: 3.5em;
+    }
+    .site-slogan {
+        font-size: 1.2em;
+    }
+    .article-title {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+    }
+    .article-section h3 {
+        font-size: 1.8em;
+    }
+    .container {
+        margin: 20px auto;
+        padding: 15px;
+    }
+    .login-container,
+    .register-container {
+        margin: 20px;
+        padding: 30px;
+        max-width: 90%;
+    }
+    .main-nav {
+        flex-direction: column; /* Coloca os itens de navegação em coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+    .main-nav .dropdown,
+    .main-nav .btn-primary,
+    .main-nav .btn-secondary {
+        margin: 10px 0; /* Espaçamento entre os itens na coluna */
+        width: 90%; /* Ocupa quase toda a largura */
+        max-width: 300px; /* Limita a largura para botões/dropdown */
+    }
+    .main-nav .dropdown-content {
+        left: 0;
+        transform: translateX(0); /* Remove centralização para mobile */
+        width: 100%; /* Ocupa a largura total do botão */
+        min-width: unset; /* Remove min-width fixo */
+    }
+    .btn-login, .btn-register {
+        font-size: 1.2em;
+        padding: 15px 25px;
+    }
+    .movie-card .image-link {
+        height: 320px; /* Ajusta altura da imagem do card para telas menores */
+    }
+    /* Ajuste para pôsteres do artigo em tablets */
+    .article-movie-poster {
+        width: 150px; /* Largura dos cartazes para tablets */
+        height: 225px;
+    }
+}
+
+@media (max-width: 480px) { /* Para smartphones menores */
+    .site-title {
+        font-size: 2.8em;
+    }
+    .site-slogan {
+        font-size: 1em;
+    }
+    .article-title {
+        font-size: 2em;
+    }
+    .article-section h3 {
+        font-size: 1.5em;
+    }
+    .article-section p {
+        font-size: 1em;
+    }
+    .login-container,
+    .register-container {
+        padding: 25px;
+    }
+    .input-group label {
+        font-size: 1em;
+    }
+    .input-group input[type="text"],
+    .input-group input[type="email"],
+    .input-group input[type="password"] {
+        padding: 12px 10px;
+        font-size: 1em;
+    }
+    .btn-login, .btn-register {
+        font-size: 1.1em;
+        padding: 12px 20px;
+        letter-spacing: 1px;
+    }
+    .forgot-password,
+    .login-link,
+    .signup-link {
+        font-size: 1em;
+    }
+    .movie-card .image-link {
+        height: 280px; /* Ajusta ainda mais a altura da imagem do card */
+    }
+    .review-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+    }
+    /* Ajuste para pôsteres do artigo em celulares */
+    .article-movie-poster {
+        width: 100px; /* Largura dos cartazes para celulares */
+        height: 150px;
+    }
+    .movie-posters-container {
+        gap: 10px; /* Reduz o espaço entre os pôsteres */
+    }
+}
