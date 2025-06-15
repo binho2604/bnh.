@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Coisa (1982) - Cine Terror</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;700&family=Nosifier&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos específicos para a página de detalhes do filme */
+        .movie-detail-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            color: #eee;
+        }
+
+        .movie-detail-container h1 {
+            font-family: 'Nosifier', cursive;
+            color: #e50914;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .movie-detail-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .movie-detail-poster {
+            flex: 0 0 300px;
+            max-width: 100%;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+        }
+
+        .movie-detail-poster img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .movie-detail-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .movie-detail-info p {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        .movie-detail-info strong {
+            color: #fff;
+        }
+
+        .movie-detail-info ul {
+            list-style: disc;
+            margin-left: 20px;
+            padding-left: 0;
+        }
+
+        .movie-detail-info ul li {
+            margin-bottom: 5px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .movie-detail-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .movie-detail-poster {
+                flex: none;
+                width: 60%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="site-title">Cine Terror</h1>
+        <p class="site-slogan">Seus Piores Pesadelos em Review</p>
+        <nav class="main-nav">
+            <a href="../login.html" class="btn-primary">Login</a>
+            <a href="../cadastro.html" class="btn-secondary">Cadastre-se</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="movie-detail-container">
+            <h1>A Coisa (1982)</h1>
+            <div class="movie-detail-content">
+                <div class="movie-detail-poster">
+                    <img src="../img/a-coisa.webp" alt="Poster do Filme A Coisa">
+                </div>
+                <div class="movie-detail-info">
+                    <p><strong>Sinopse:</strong> Em uma estação de pesquisa na Antártida, um grupo de cientistas se depara com uma criatura alienígena parasita que pode assumir a forma de qualquer ser vivo que assimila. À medida que a paranoia cresce e a desconfiança se instala entre os membros da equipe, eles percebem que qualquer um pode ser "A Coisa", levando-os a uma luta brutal pela sobrevivência contra um inimigo que não pode ser identificado.</p>
+                    <p><strong>Diretor:</strong> John Carpenter</p>
+                    <p><strong>Elenco Principal:</strong> Kurt Russell (R.J. MacReady), Wilford Brimley (Dr. Blair), T.K. Carter (Nauls), David Clennon (Palmer), Keith David (Childs), Richard Dysart (Dr. Copper).</p>
+                    <p><strong>Bilheteria Mundial:</strong> Aproximadamente US$19.6 milhões</p>
+                    <p><strong>Curiosidades:</strong>
+                        <ul>
+                            <li>Um remake do filme "O Monstro do Ártico" (1951), baseado no conto "Who Goes There?" de John W. Campbell Jr.</li>
+                            <li>Apesar de ter sido um fracasso de bilheteria em seu lançamento, "A Coisa" ganhou status de cult e é hoje considerado um dos maiores filmes de terror e ficção científica de todos os tempos.</li>
+                            <li>É a primeira parte da "Trilogia do Apocalipse" de John Carpenter, que inclui também "O Príncipe das Sombras" e "Na Boca do Loucura".</li>
+                            <li>Os efeitos práticos de maquiagem e criatura, criados por Rob Bottin, são altamente elogiados por sua inovação e realismo perturbador.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 30px;"><a href="../index.html" class="btn-secondary">Voltar para a Página Inicial</a></p>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Cine Terror. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

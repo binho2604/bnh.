@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Hora do Pesadelo (1984) - Cine Terror</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;700&family=Nosifier&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos específicos para a página de detalhes do filme */
+        .movie-detail-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            color: #eee;
+        }
+
+        .movie-detail-container h1 {
+            font-family: 'Nosifier', cursive;
+            color: #e50914;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .movie-detail-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .movie-detail-poster {
+            flex: 0 0 300px;
+            max-width: 100%;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+        }
+
+        .movie-detail-poster img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .movie-detail-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .movie-detail-info p {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        .movie-detail-info strong {
+            color: #fff;
+        }
+
+        .movie-detail-info ul {
+            list-style: disc;
+            margin-left: 20px;
+            padding-left: 0;
+        }
+
+        .movie-detail-info ul li {
+            margin-bottom: 5px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .movie-detail-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .movie-detail-poster {
+                flex: none;
+                width: 60%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="site-title">Cine Terror</h1>
+        <p class="site-slogan">Seus Piores Pesadelos em Review</p>
+        <nav class="main-nav">
+            <a href="../login.html" class="btn-primary">Login</a>
+            <a href="../cadastro.html" class="btn-secondary">Cadastre-se</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="movie-detail-container">
+            <h1>A Hora do Pesadelo (1984)</h1>
+            <div class="movie-detail-content">
+                <div class="movie-detail-poster">
+                    <img src="../img/hora-do-pesadelo.jpg" alt="Poster do Filme A Hora do Pesadelo">
+                </div>
+                <div class="movie-detail-info">
+                    <p><strong>Sinopse:</strong> Um grupo de adolescentes de uma pequena cidade começa a ser atormentado nos seus sonhos por um assassino desfigurado chamado Freddy Krueger. Os pesadelos são tão reais que os ferimentos sofridos durante o sono se manifestam no mundo real. Quando os amigos começam a morrer um a um, a jovem Nancy Thompson precisa descobrir o segredo de Freddy e encontrar uma forma de detê-lo antes que ele consiga pegá-la também.</p>
+                    <p><strong>Diretor:</strong> Wes Craven</p>
+                    <p><strong>Elenco Principal:</strong> Heather Langenkamp (Nancy Thompson), John Saxon (Lt. Don Thompson), Ronee Blakley (Marge Thompson), Amanda Wyss (Tina Gray), Nick Corri (Rod Lane), Johnny Depp (Glen Lantz).</p>
+                    <p><strong>Bilheteria Mundial:</strong> Aproximadamente US$57 milhões</p>
+                    <p><strong>Curiosidades:</strong>
+                        <ul>
+                            <li>Introduziu um dos maiores ícones do cinema de terror, Freddy Krueger, um assassino que ataca as vítimas em seus sonhos.</li>
+                            <li>Foi um dos filmes que impulsionou o gênero slasher nos anos 80, destacando-se pela originalidade do seu vilão e conceito.</li>
+                            <li>Marcarou a estreia de Johnny Depp no cinema.</li>
+                            <li>O roteiro de Wes Craven foi inspirado em artigos de jornal sobre pessoas que morreram enquanto sonhavam.</li>
+                            <li>O filme foi feito com um orçamento relativamente baixo e se tornou um enorme sucesso de bilheteria, gerando uma longa franquia.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 30px;"><a href="../index.html" class="btn-secondary">Voltar para a Página Inicial</a></p>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Cine Terror. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
